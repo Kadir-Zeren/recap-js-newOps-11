@@ -171,4 +171,90 @@ const cumle = "Olmak ya da olmamak";
 const karakter = [...cumle];
 
 console.log(karakter);
+console.log(cumle);
 
+console.log("MAX:", Math.max(1, 3, 4, -1, 4));
+const rakamlar = [23, 45, 66, 77, 12, -1];
+
+console.log("MIN:", Math.min(...rakamlar));
+
+const myNumbers = [4, 5, 6, [11, 22]];
+const herNumbers = [1, 2, 3, ...myNumbers];
+const hisNumbers = [...herNumbers];
+
+console.log(herNumbers, myNumbers);
+console.log(hisNumbers);
+
+hisNumbers.push(7);
+hisNumbers.push(77);
+
+console.log("MY:", myNumbers);
+console.log("HER:", herNumbers);
+console.log("HIS:", hisNumbers);
+
+myNumbers[3][1] = 44;
+
+const theirNumbers = hisNumbers;
+
+theirNumbers.push(8);
+console.log(theirNumbers, hisNumbers);
+
+const firsObj = { a: 1, b: 2, c: 3 };
+const secondObj = { a: 2, d: 3, c: 4 };
+
+const copiedFirstObj = { ...firsObj };
+console.log(copiedFirstObj);
+
+copiedFirstObj.a = 44;
+
+console.log(copiedFirstObj, firsObj);
+
+const combinedObjs = { ...secondObj, ...firsObj };
+console.log(combinedObjs);
+
+const people = {
+  person1: {
+    name: "Can",
+    surname: "Canan",
+    dob: "1990",
+    job: "developer",
+    salary: "140000",
+    drivingLicense: true,
+  },
+  person2: {
+    name: "John",
+    surname: "Sweet",
+    dob: "1990",
+    job: "tester",
+    salary: "110000",
+    drivingLicense: false,
+  },
+  person3: {
+    name: "Steve",
+    surname: "Job",
+    dob: "2000",
+    job: "developer",
+    salary: "90000",
+    drivingLicense: true,
+  },
+};
+
+console.log("Maas:", people.person3.salary);
+
+for (let p in people) {
+  console.log(p);
+  console.log(people[p].salary);
+}
+
+console.log(Object.keys(people));
+console.log(Object.values(people));
+console.log(Object.entries(people));
+
+console.log("***********");
+for (let key of Object.keys(people)) {
+  console.log(key);
+}
+console.log("***********");
+for (let v of Object.values(people)) {
+  console.log(v.job);
+}
